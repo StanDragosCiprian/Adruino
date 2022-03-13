@@ -1,0 +1,16 @@
+void setup() {
+  DDRB=0x3C;
+  DDRC=0xFD;
+}
+
+int main()
+{
+   setup();
+   
+   while(true){
+     if((PINC&11111111)==0){
+    PORTB |= B00110000;
+     }
+   }
+}
+
